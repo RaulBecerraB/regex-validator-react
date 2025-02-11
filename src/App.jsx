@@ -12,27 +12,22 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 py-8 px-4">
-      <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
-        {/* Header */}
+    <div className="min-h-screen bg-blue-200 py-8 px-4 flex items-center justify-center">
+      <div className="max-w-lg mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
         <div className="bg-[#0A2F7B] px-6 py-5">
           <h1 className="text-white text-xl font-semibold m-0">
             Compilador Unidad 1 - Lenguajes y autómatas II
           </h1>
         </div>
-
-        {/* Content */}
         <div className="p-6">
-          {/* Expresión Regular Section */}
-          <h2 className="text-[#0A2F7B] text-lg font-semibold mb-3">
+          <h2 className="text-[#0A2F7B] text-2xl font-semibold mb-3">
             Expresión regular
           </h2>
-          <div className="bg-gray-50 p-4 rounded-lg mb-6 font-mono">
+          <div className="mb-6 font-normal text-2xl">
             (A-Z)(a-z U A-Z U 0-9 U _)*
           </div>
 
-          {/* Entrada Section */}
-          <h2 className="text-[#0A2F7B] text-lg font-semibold mb-3">
+          <h2 className="text-[#0A2F7B] text-2xl font-semibold mb-3">
             Entrada
           </h2>
           <input
@@ -40,21 +35,19 @@ function App() {
             value={input}
             onChange={(e) => validateInput(e.target.value)}
             placeholder="Ingrese texto..."
-            className="w-full px-4 py-3 rounded-lg border border-gray-300 mb-6 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-3 rounded-lg border border-[#0A2F7B] mb-6 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
 
-          {/* Salida Section */}
-          <h2 className="text-[#0A2F7B] text-lg font-semibold mb-3">
+          <h2 className="text-[#0A2F7B] text-2xl font-semibold mb-3">
             Salida
           </h2>
-          <div className={`min-h-[45px] px-4 py-3 rounded-lg border border-gray-300 bg-gray-50 ${
+          <div className={`min-h-[45px] px-4 py-3 rounded-lg border border-[#0A2F7B] bg-gray-50 ${
             input ? (isValid ? 'text-green-600' : 'text-red-600') : ''
           }`}>
             {input && (isValid ? 'Palabra correcta' : 'Palabra incorrecta')}
           </div>
         </div>
 
-        {/* Footer */}
         <div className="bg-[#0A2F7B] px-6 py-4 text-center">
           <p className="text-white text-sm">
             Powered by Raúl Becerra
